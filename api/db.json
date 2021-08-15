@@ -1,0 +1,45 @@
+{
+  "streams": [
+    {
+      "title": "test",
+      "description": "test",
+      "id": 1
+    },
+    {
+      "title": "My stream",
+      "description": "Example Stream",
+      "id": 2
+    },
+    {
+      "title": "My stream",
+      "description": "Example Stream",
+      "id": 3
+    },
+    {
+      "title": "Test",
+      "description": "Test",
+      "id": 4
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "id": 5
+    },
+    {
+      "title": "hello",
+      "description": "world",
+      "id": 6
+    },
+    {
+      "title": "hey",
+      "description": "world",
+      "id": 7
+    },
+    {
+      "title": "test",
+      "description": "test",
+      "userId": "115294627452638767735",
+      "id": 8
+    }
+  ]
+}

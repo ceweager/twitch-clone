@@ -1,4 +1,6 @@
-export const createStream = (formValues) => async (dispatch) => {
+export const createStream = (formValues) => async (dispatch, getState) => {
+  const { userId } = getState().auth;
+  console.log(userId);
   const response = await fetch(`http://localhost:3001/streams`,
     {
       headers: {
@@ -6,7 +8,7 @@ export const createStream = (formValues) => async (dispatch) => {
         'Content-Type': 'application/json'
       },
       method: "POST",
-      body: JSON.stringify(formValues)
+      body: JSON.stringify({ ...formValues, userId })
     })
     .then(response => response.json())
   dispatch({ type: "CREATE_STREAM", payload: response })
