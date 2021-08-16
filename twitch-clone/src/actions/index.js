@@ -51,11 +51,12 @@ export const updateStream = (id, formValues) => async (dispatch) => {
         'Accept': 'application/json',
         'Content-Type': 'application/json'
       },
-      method: "PUT",
+      method: "PATCH",
       body: JSON.stringify(formValues)
     })
     .then(response => response.json())
-  dispatch({ type: "UPDATE_STREAM", payload: response })
+  dispatch({ type: "UPDATE_STREAM", payload: response });
+  history.push('/');
 }
 
 export const signIn = (userId) => {
