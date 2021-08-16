@@ -1,3 +1,5 @@
+import history from '../history';
+
 export const createStream = (formValues) => async (dispatch, getState) => {
   const { userId } = getState().auth;
   console.log(userId);
@@ -12,6 +14,7 @@ export const createStream = (formValues) => async (dispatch, getState) => {
     })
     .then(response => response.json())
   dispatch({ type: "CREATE_STREAM", payload: response })
+  history.push('/');
 }
 
 export const fetchStreams = () => async (dispatch) => {
