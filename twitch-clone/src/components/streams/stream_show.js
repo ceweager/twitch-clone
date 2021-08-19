@@ -15,6 +15,15 @@ class StreamShow extends Component {
     this.buildPlayer(id);
   }
 
+  componentDidUpdate() {
+    const { id } = this.props.match.params;
+    this.buildPlayer(id);
+  }
+
+  componentWillUnmount() {
+    this.player.destroy();
+  }
+
   buildPlayer = (id) => {
     if (this.player || !this.props.stream) {
       return;
@@ -25,7 +34,7 @@ class StreamShow extends Component {
     })
     this.player.attachMediaElement(this.videoRef.current);
     this.player.load();
-  }s
+  }
 
   render() {
     if (!this.props.stream) {
